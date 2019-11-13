@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AssemblyName>InteractR.Resolver.ServiceProvider</AssemblyName>
+    <RootNamespace>InteractR.Resolver.ServiceProvider</RootNamespace>
+    <PackageProjectUrl>https://github.com/madebykrol/InteractR.Resolver.ServiceProvider</PackageProjectUrl>
+    <Authors>Kristoffer Olsson</Authors>
+    <Company>MadeByKrol</Company>
+    <RepositoryUrl>https://github.com/madebykrol/InteractR.Resolver.ServiceProvider</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="InteractR" Version="1.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>

@@ -12,7 +12,6 @@ namespace InteractR.Resolver.ServiceProvider.Tests
     [TestFixture]
     public class ServiceProviderTests
     {
-
         private IInteractorHub _interactorHub;
         private IInteractor<MockUseCase, IMockOutputPort> _useCaseInteractor;
 

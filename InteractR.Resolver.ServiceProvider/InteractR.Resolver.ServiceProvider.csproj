@@ -6,13 +6,14 @@
     <RootNamespace>InteractR.Resolver.ServiceProvider</RootNamespace>
     <PackageProjectUrl>https://github.com/madebykrol/InteractR.Resolver.ServiceProvider</PackageProjectUrl>
     <Authors>Kristoffer Olsson</Authors>
-    <Company>MadeByKrol</Company>
+    <Company>Kristoffer Olsson</Company>
     <RepositoryUrl>https://github.com/madebykrol/InteractR.Resolver.ServiceProvider</RepositoryUrl>
+    <Version>2.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="InteractR" Version="1.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="1.1.0" />
+    <PackageReference Include="InteractR" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.0" />
   </ItemGroup>
 
 </Project>

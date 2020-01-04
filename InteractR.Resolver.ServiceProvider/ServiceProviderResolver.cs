@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using InteractR.Interactor;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -14,6 +16,14 @@ namespace InteractR.Resolver.ServiceCollection
         }
 
         public IInteractor<TUseCase, TOutputPort> ResolveInteractor<TUseCase, TOutputPort>(TUseCase useCase)
-            where TUseCase : IUseCase<TOutputPort> => _serviceProvider.GetService<IInteractor<TUseCase, TOutputPort>>();
+            where TUseCase : IUseCase<TOutputPort> 
+                => _serviceProvider.GetService<IInteractor<TUseCase, TOutputPort>>();
+
+        public IReadOnlyList<IMiddleware<TUseCase, TOutputPort>> ResolveMiddleware<TUseCase, TOutputPort>(TUseCase useCase) 
+            where TUseCase : IUseCase<TOutputPort> 
+                => _serviceProvider.GetServices<IMiddleware<TUseCase, TOutputPort>>().ToList();
+
+        public IReadOnlyList<IMiddleware> ResolveGlobalMiddleware() 
+            => _serviceProvider.GetServices<IMiddleware>().ToList();
     }
 }

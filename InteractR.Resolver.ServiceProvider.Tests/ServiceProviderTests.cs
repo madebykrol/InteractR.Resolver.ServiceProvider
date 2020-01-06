@@ -21,10 +21,10 @@ namespace InteractR.Resolver.ServiceProvider.Tests
             var serviceCollection = new Microsoft.Extensions.DependencyInjection.ServiceCollection();
             _useCaseInteractor = Substitute.For<IInteractor<MockUseCase, IMockOutputPort>>();
             serviceCollection.AddSingleton(_useCaseInteractor);
-
+            serviceCollection.AddInteractR();
             var serviceProvider = serviceCollection.BuildServiceProvider();
 
-            _interactorHub = new Hub(new ServiceProviderResolver(serviceProvider));
+            _interactorHub = serviceProvider.GetService<IInteractorHub>();
         }
 
         [Test]

@@ -30,7 +30,7 @@ namespace InteractR.Resolver.ServiceCollection
             var middlewareType = typeof(IMiddleware<>);
 
             return types.SelectMany(type => _serviceProvider.GetServices(middlewareType.MakeGenericType(type)).Cast<IMiddleware<TUseCase>>())
-                .Where(instance => instance != null).ToList();
+                .Where(instance => instance != null).Distinct().ToList();
         }
 
         public IReadOnlyList<IMiddleware> ResolveGlobalMiddleware() 

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using InteractR.Resolver.ServiceCollection;
+﻿using InteractR.Resolver.ServiceCollection;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace InteractR.Resolver.ServiceProvider
